@@ -1,0 +1,133 @@
+# 环境变量（含密钥）
+.env
+.env.*
+!.env.example
+
+# SQLite 数据库
+*.db
+*.db-shm
+*.db-wal
+!*.db.example
+
+# 数据库备份
+*_backup_*.db
+*.db.bak_*
+
+# Node
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日志
+*.log
+logs/
+
+# 截图和临时测试文件
+_screenshots/
+*.png
+*.jpg
+*.jpeg
+*_result.json
+*_acceptance_result.json
+
+# 临时测试脚本（以 _ 开头或 test_ 开头的不提交，除非在 tests/ 下）
+/test_*.py
+/_*.py
+/test_browser*.py
+/test_flow*.py
+/test_page*.py
+/test_vite*.py
+/check_*.py
+/diagnose*.py
+/cleanup*.py
+/list_projects.py
+/insert_tasks.py
+/retry_tasks.py
+/verify_clean.py
+backend/reset_sandbox_task.py
+backend/setup_sandbox_task.py
+backend/test_executor_direct.py
+backend/verify_execution.py
+backend/audit_migration.py
+backend/test_rollback.py
+backend/test_workspace_guard*.py
+backend/test_boundary_only.py
+backend/test_failure_scenarios.py
+backend/test_api_full.py
+backend/test_concurrent_claim.py
+backend/check_tasks_schema.py
+backend/cleanup_test_data.py
+backend/final_test.py
+
+# DOM dump
+*_dom.html
+simple_*.html
+
+# 执行器工作目录
+.executor/
+executor-sandbox*/
+checkpoint/
+runtime/
+backend/runtime/
+config/agent_runtime*.json
+!config/agent_runtime.example.json
+
+# 执行器日志与元数据（不污染项目）
+*.executor.json
+worktree_cleanup_log.json
+merge_log.json
+finalization_log.json
+residual_worktree_report.json
+parallel_overlap_result.json
+
+# 测试辅助文件（必须放在 executor 目录）
+/test_residual_*.py
+/test_parallel_*.py
+/test_recovery_*.py
+/test_merge_*.py
+/test_acceptance_*.py
+
+# Test output artifacts
+backend/test_output*.txt
+backend/merge_err.txt
+backend/merge_output.txt
+backend/recovery_output.txt
+backend/test_parallel_error.txt
+
+# Diagnostic and one-off utility scripts
+backend/check_*.py
+backend/cleanup_params.py
+backend/fix_*.py
+backend/step3_integration_test.py
+
+# Audit archives (one-off scripts, not for commit)
+backend/tools_archive_*/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local environment and runtime artifacts
+auth.json
+*.pid
+*.lock
+backend/data/
+runtime/
+runtime/quarantine/
+.codex/local/
+.codex/cache/

@@ -1,0 +1,159 @@
+/* =============================================
+   响应式设计样式
+   覆盖：手机、平板、小屏桌面
+   ============================================= */
+
+/* 平板 (< 1024px) */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .simple-home,
+  .simple-mode {
+    max-width: 100%;
+    padding: 8px 8px 32px;
+  }
+
+  .simple-home-title,
+  .simple-mode-title {
+    font-size: 24px;
+  }
+
+  .simple-home-subtitle,
+  .simple-mode-subtitle {
+    font-size: 14px;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 手机 (< 768px) */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+  }
+
+  .sidebar-logo {
+    padding: 0;
+    border-bottom: none;
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    gap: 4px;
+    padding: 0;
+  }
+
+  .sidebar-nav a {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  .main-content {
+    padding: 16px;
+    max-height: none;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .page-header h2 {
+    font-size: 18px;
+  }
+
+  .simple-home-title,
+  .simple-mode-title {
+    font-size: 20px;
+  }
+
+  .simple-home-input-footer,
+  .simple-mode-input-footer {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+
+  .simple-home-submit-btn {
+    width: 100%;
+  }
+
+  .simple-home-status,
+  .simple-mode-status {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .simple-home-recent-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-actions {
+    flex-direction: column;
+  }
+
+  .bug-analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bug-checklist {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 小屏手机 (< 480px) */
+@media (max-width: 480px) {
+  .sidebar-nav {
+    gap: 2px;
+  }
+
+  .sidebar-nav a {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .main-content {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .simple-home-examples-row,
+  .simple-mode-examples-row {
+    gap: 4px;
+  }
+
+  .simple-home-example-btn,
+  .simple-mode-example-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+}

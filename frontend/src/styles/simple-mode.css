@@ -1,0 +1,165 @@
+/* =============================================
+   简化模式基础样式
+   包含：页面布局、标题、状态栏、最近项目
+   ============================================= */
+
+.simple-mode {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8px 0 40px;
+}
+
+/* 标题区 */
+.simple-mode-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.simple-mode-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.simple-mode-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* 输入区 */
+.simple-mode-input-area {
+  margin-bottom: 24px;
+}
+
+.simple-mode-textarea {
+  width: 100%;
+  min-height: 110px;
+  padding: 14px 16px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.6;
+  resize: vertical;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.simple-mode-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.simple-mode-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.simple-mode-input-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.simple-mode-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* 示例按钮 */
+.simple-mode-examples {
+  margin-bottom: 24px;
+}
+
+.simple-mode-examples-label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.simple-mode-examples-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.simple-mode-example-btn {
+  padding: 8px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.simple-mode-example-btn:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* 状态栏 */
+.simple-mode-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.simple-mode-status-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.simple-mode-status-link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin-left: 2px;
+}
+
+.simple-mode-status-link:hover {
+  color: var(--accent-hover);
+}
+
+/* 最近项目 */
+.simple-mode-recent {
+  margin-top: 0;
+}
+
+.simple-mode-recent-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.simple-mode-recent-empty {
+  text-align: center;
+  padding: 32px 20px;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+}

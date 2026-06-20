@@ -1,0 +1,15 @@
+"""清理测试数据"""
+import sqlite3, os
+db_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "ai_factory.db")
+conn = sqlite3.connect(db_path)
+c = conn.cursor()
+c.execute("DELETE FROM bug_status_logs WHERE bug_id IN (SELECT id FROM bugs WHERE title LIKE 'QA%' OR title LIKE 'Load%' OR title LIKE 'StateMachine%')")
+c.execute("DELETE FROM bugs WHERE title LIKE 'QA%' OR title LIKE 'Load%' OR title LIKE 'StateMachine%'")
+c.execute("DELETE FROM projects WHERE name LIKE 'QA%' OR name LIKE 'Load%' OR name LIKE 'StateMachine%'")
+print(f"Cleaned test data")
+conn.commit()
+c.execute("SELECT COUNT(*) FROM bugs")
+print(f"Remaining bugs: {c.fetchone()[0]}")
+c.execute("SELECT COUNT(*) FROM projects")
+print(f"Remaining projects: {c.fetchone()[0]}")
+conn.close()

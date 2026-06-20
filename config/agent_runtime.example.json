@@ -1,0 +1,15 @@
+{
+  "mode": "mock",
+  "control_plane_url": "http://127.0.0.1:18000",
+  "worker_id": "local-agent-runtime-example",
+  "project_id": 0,
+  "allowed_task_ids": [1],
+  "capabilities": ["control_plane_probe", "probe", "python"],
+  "sandbox_root": "./runtime/agent-runtime-sandbox",
+  "heartbeat_interval": 2.0,
+  "lease_seconds": 300,
+  "poll_interval": 1.0,
+  "request_timeout": 10.0,
+  "max_retries": 3,
+  "dry_run": true
+}
